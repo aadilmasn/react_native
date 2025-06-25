@@ -63,3 +63,66 @@ npm install react-native-razorpay
 ### Note: Use it in Git Bash
 ```bash
 mkdir -p src/{components,screens,utils,standards,assets,navigations,layout,config,customs,helpers,hooks}
+```
+## Step 5: Redux Setup
+### src/storage/redux/store.js
+```bash
+import { configureStore } from '@reduxjs/toolkit';
+import { persistStore, persistReducer } from 'redux-persist';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import rootReducer from './root';
+
+const persistConfig = {
+    key: 'root',
+    storage: AsyncStorage,
+    whitelist: ['counter'],
+};
+
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+
+export const store = configureStore({
+    reducer: persistedReducer,
+    middleware: getDefaultMiddleware =>
+        getDefaultMiddleware({
+            serializableCheck: false,
+        }),
+});
+
+export const persistor = persistStore(store);
+```
+### src/storage/redux/root.js
+```bash
+import { combineReducers } from '@reduxjs/toolkit';
+import counterReducer from '../slice/counter';
+
+const rootReducer = combineReducers({
+  counter: counterReducer,
+});
+
+export default rootReducer;
+```
+
+### src/storage/slice/counter.js
+```bash
+import { createSlice } from '@reduxjs/toolkit';
+
+const initialState = {
+  value: 0,
+};
+
+export const counterSlice = createSlice({
+  name: 'counter',
+  initialState,
+  reducers: {
+    increment: state => {
+      state.value += 1;
+    },
+    decrement: state => {
+      state.value -= 1;
+    },
+  },
+});
+
+export const { increment, decrement } = counterSlice.actions;
+export default counterSlice.reducer;
+```
