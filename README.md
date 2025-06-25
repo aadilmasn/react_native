@@ -40,16 +40,26 @@ npm install react-native-razorpay
   src
   ├── assets
   │ └── logo.png 
-  ├── components 
-  │ ├── Header.js 
-  │ └── Footer.js 
+  ├── components
+  │ └── ProductCard.jsx 
+  ├── config
+  │ └── Socket.js 
+  ├── customs
+  │ └── ThemedView.jsx
+  ├── hooks
+  │ └── AddProduct.jsx 
+  ├── layout
+  │ └── Stack.jsx 
+  ├── navigations
+  │ └── BottomTab.jsx 
   ├── screens
-  │ ├── HomeScreen.js 
-  │ └── ProfileScreen.js 
-  ├── storage
-  └── utils 
+  │ └── ProductScreen.jsx 
+  ├── standards
+  │ └── Colors.js 
+  └── utils
+    └── sampleData.js 
 </code> </pre>
 ## Step 4: Create Folders
 ### Note: Use it in Git Bash (Windows CMD not support and remember no space inside {})
 ```bash
-mkdir -p src/{components,screens,utils,standars,assets,navigations,layout,config,customs,helpers,hooks}
+mkdir -p src/{components,screens,utils,standards,assets,navigations,layout,config,customs,helpers,hooks}
