@@ -21,7 +21,7 @@ npm install react-native-tab-view react-native-pager-view
 ```
 ### Add Icons
 ```bash
-npm install react-native-vector-icon
+npm install react-native-vector-icons
 ```
 ### Add Animations
 ```bash
