@@ -3,7 +3,7 @@
 npx @react-native-community/cli@latest init NameSomething
 ```
 ## Step 2: Dependencies
-### Remove ESLint
+### Remove Dependencies not needed
 ```bash
 npm uninstall jest react-test-renderer typescript eslint @react-native/eslint-config @react-native/new-app-screen @react-native/typescript-config @types/jest @types/react @types/react-test-renderer
 ```
@@ -20,7 +20,7 @@ npm install react-native-screens react-native-safe-area-context @react-navigatio
 npm install react-native-tab-view react-native-pager-view 
 ```
 ### Add Icons
-[Icons Link](https://oblador.github.io/react-native-vector-icons)
+[<-- ICON PAGE -->](https://oblador.github.io/react-native-vector-icons)
 ```bash
 npm install react-native-vector-icons
 ```
