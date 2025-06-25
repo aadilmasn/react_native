@@ -1,26 +1,9 @@
 # React Native Setup
-## Step 1:
+## Step 1: Create React Native Project
 ```bash
-npx @react-native-community/cli@latest init react-native-javascript
-
-# Project Title
-
-A short description of what this project does and who it's for.
-
-## 🚀 Features
-
-- Feature 1
-- Feature 2
-- Feature 3
-
-## 🛠️ Installation
-
+npx @react-native-community/cli@latest init NameSomething
+```
+## Step 2: Install Dependencies
 ```bash
-# Clone the repository
-git clone https://github.com/username/project-name.git
-
-# Go into the directory
-cd project-name
-
-# Install dependencies (example: for Node.js)
-npm install
+npm install 
+```
