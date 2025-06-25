@@ -36,7 +36,16 @@ npm install firebase
 npm install react-native-razorpay
 ```
 ## Step 3: Folder Structure
-<pre> <code> ```text my-project/ ├── assets/ │ └── logo.png ├── components/ │ ├── Header.js │ └── Footer.js ├── screens/ │ ├── HomeScreen.js │ └── DetailScreen.js ├── App.js └── package.json ``` </code> </pre>
-```bash
-
-```
+<pre> <code> 
+  src/ 
+  ├── assets / 
+  │ └── logo.png 
+  ├── components / 
+  │ ├── Header.js 
+  │ └── Footer.js 
+  ├── screens / 
+  │ ├── HomeScreen.js 
+  │ └── ProfileScreen.js 
+  ├── storage /
+  └── utils /  
+</code> </pre>
