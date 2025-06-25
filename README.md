@@ -126,3 +126,50 @@ export const counterSlice = createSlice({
 export const { increment, decrement } = counterSlice.actions;
 export default counterSlice.reducer;
 ```
+
+### src/screens/Counter.jsx
+```bash
+import React from 'react';
+import { View, Text, Button, StyleSheet } from 'react-native';
+import { useDispatch, useSelector } from 'react-redux';
+import { increment, decrement } from './storage/slice/counter';
+
+export default function Counter() {
+  const dispatch = useDispatch();
+  const count = useSelector(state => state.counter.value);
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Count: {count}</Text>
+      <Button title="Increment" onPress={() => dispatch(increment())} />
+      <Button title="Decrement" onPress={() => dispatch(decrement())} />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: { flex: 1, justifyContent: 'center', alignItems: 'center' },
+  title: { fontSize: 24, marginBottom: 20 },
+});
+
+```
+
+### App.jsx
+```bash
+import React from 'react';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { store, persistor } from './src/storage/redux/store';
+import { ActivityIndicator } from 'react-native';
+import Counter from './src/Counter';
+
+export default function App() {
+  return (
+    <Provider store={store}>
+      <PersistGate loading={<ActivityIndicator />} persistor={persistor}>
+        <Counter />
+      </PersistGate>
+    </Provider>
+  );
+}
+```
