@@ -5,7 +5,7 @@ npx @react-native-community/cli@latest init NameSomething
 ## Step 2: Dependencies
 ### Remove ESLint
 ```bash
-npm uninstall eslint @react-native/eslint-config
+npm uninstall jest react-test-renderer typescript eslint @react-native/eslint-config @react-native/new-app-screen @react-native/typescript-config @types/jest @types/react @types/react-test-renderer
 ```
 ### Add State Management
 ```bash
@@ -35,7 +35,7 @@ npm install firebase
 ```bash
 npm install react-native-razorpay
 ```
-## Step 3: Folder Structure
+## Step 3: Sample Folder Structure
 <pre> <code> 
   src
   ├── assets
@@ -60,6 +60,6 @@ npm install react-native-razorpay
     └── sampleData.js 
 </code> </pre>
 ## Step 4: Create Folders
-### Note: Use it in Git Bash (Windows CMD not support and remember no space inside {})
+### Note: Use it in Git Bash
 ```bash
 mkdir -p src/{components,screens,utils,standards,assets,navigations,layout,config,customs,helpers,hooks}
