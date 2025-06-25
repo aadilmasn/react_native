@@ -20,7 +20,7 @@ npm install react-native-screens react-native-safe-area-context @react-navigatio
 npm install react-native-tab-view react-native-pager-view 
 ```
 ### Add Icons
-[Icons Link](https://github.com/oblador/react-native-vector-icons)
+[Icons Link](https://oblador.github.io/react-native-vector-icons)
 ```bash
 npm install react-native-vector-icons
 ```
