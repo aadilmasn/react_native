@@ -23,6 +23,23 @@ npm install react-native-tab-view react-native-pager-view
 ```bash
 npm install react-native-vector-icons
 ```
+### Icons Setup
+#### android/app/build.gradle
+```bash
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle" //starting
+implementation project(':react-native-vector-icons') //inside dependencies
+```
+#### android/settings.gradle
+```bash
+include ':react-native-vector-icons'
+project(':react-native-vector-icons').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vector-icons/android')
+```
+#### android/app/src/main --> create folders --> /assets/fonts
+```bash
+mkdir assets
+cd assets
+mkdir fonts
+```
 ### Add Animations
 ```bash
 npm install react-native-reanimated react-native-gesture-handler
@@ -173,3 +190,6 @@ export default function App() {
   );
 }
 ```
+
+## Step 6: Create Navigations
+
